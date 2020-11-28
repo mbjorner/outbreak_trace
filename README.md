@@ -15,7 +15,7 @@ BMI Project Proposal (22OCT2020) provides objectives and motivations behind proj
 - originally published by Jombart et al. 2011
 
 Simulated Data
-- from outbreak2 // found in runOutbreaker2.R
+- from outbreak2 // found in [runOutbreaker2.R](https://github.com/mbjorner/outbreak_trace/blob/main/runOutbreaker2.R)
 - from R method provided by Jombart et al. 2011
 
 ### algorithms / methods
