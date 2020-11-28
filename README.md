@@ -1,6 +1,7 @@
 # outbreak_trace
 
-Fall 2020 BMI 826 Project Repository
+Fall 2020 BMI 826 Project Repository:
+
 Graphical and Phylogenetic Models of Outbreak Transmission Trees
 
 
