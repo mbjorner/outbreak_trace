@@ -9,7 +9,7 @@ library(ape)
 # https://www.rdocumentation.org/packages/adegenet/versions/2.0.1/topics/seqTrack
 
 ## load data
-dat = read.csv("H1N1_time_location_data.csv", header = T)       # package = "adegenet" unused.
+dat = read.csv("H1N1_temporospatial.csv", sep= ",", header = T)       # package = "adegenet" unused.
 ha  = read.dna("H1N1_HA_sequences.txt", format="fa")
 na  = read.dna("H1N1_NA_sequences.txt", format="fa")
 
@@ -22,7 +22,7 @@ distances    = dist.dna(ha, model = "raw")*ncol(as.matrix(ha)) +
 distances    = round(as.matrix(distances))
 
 ## spatial connectivity matrix
-xy = cbind(dat$lon, dat$lat) # currently there are issues with how the csv file is loaded and read
+xy = cbind(dat$lon, dat$lat)
 temp = as.matrix(dist(xy))
 M = 1 * (temp < 1e-10)
 
@@ -32,7 +32,7 @@ dat$date = as.POSIXct(dat$date)
 results  = seqTrack(distances, rownames(dat), dat$date, prox.mat=M, mu=mu1, haplo.le = nbNucleotide)  
 
 ## Genetic likelihood
-p = get.likelihood(results, mu=mu1, hapl.length=nbNucleotide)
+p = get.likelihood(results, mu=mu1, haplo.length=nbNucleotide)
 
 head(results)
 tail(results)
