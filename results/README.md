@@ -8,6 +8,6 @@ Phylogenetic methods:
 
 Genealogy methods:
 
-- SeqTrack
+- seqTrack
 
 - outbreaker2
