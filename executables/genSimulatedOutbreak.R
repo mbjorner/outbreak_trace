@@ -27,10 +27,10 @@ for(simIdx in 1:NBSIM){
   mySim <- list(ances=NA) # initialization
   while(sum(!is.na(mySim$ances)) < 500){
     ## MAKE SIMULATION
-    mySim <- haploGen(seq.le=SEQLENGTH, Tmax=TMAX, mu=TXMUT,
-                      mean.gen=GENTIME, sd.gen=GENTIME.SD,
-                      mean.repr=REPRO, sd.repro=REPRO.SD,
-                      max.nb=MAXNBSEQ, lambda.xy=DISP, grid.size=5,
+    mySim <- haploGen(seq.length = SEQLENGTH, t.max=TMAX, mu.transi =TXMUT,
+                      gen.time=function(){rnorm(1, GENTIME, GENTIME.SD)},
+                      repro = function(){rnorm(1, REPRO, REPRO.SD)},
+                      max.nb.haplo = MAXNBSEQ, lambda.xy=DISP, grid.size=5,
                       ini.n=INI.N)
   } # end while
   save(mySim, file=paste("sim.unif", simIdx, "RData", sep="."))
@@ -101,11 +101,10 @@ DISPMAT[22,22] <- 1-DISP
 ## DISPMAT[,] <- 0.8
 DISPMAT <- prop.table(DISPMAT,1)
 NBSIM <- 10
-9
 NBSAMP <- 10
 SAMPSIZE <- 800
 ## SIMULATE DATA ##
-for(simIdx in 1:NBSIM){
+for(simIdx in 1:NBSIM){ # does not enter this loop for whatever reason
   mySim <- list(ances=NA) # initialization
   while(sum(!is.na(mySim$ances)) < 500){
     ## MAKE SIMULATION
@@ -126,3 +125,4 @@ for(simIdx in 1:NBSIM){
 }
 ## TO VISUALIZE THE LATEST DATASET ##
 plotHaploGen(mySamp)
+
