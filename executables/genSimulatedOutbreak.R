@@ -36,8 +36,8 @@ for(simIdx in 1:NBSIM){
   save(mySim, file=paste("sim.unif", simIdx, "RData", sep="."))
   ## GET SAMPLES
   for(sampIdx in 1:NBSAMP){
-    mySamp <- sample.haploGen(mySim, SAMPSIZE, rDate=rpois,
-                              arg.rDate=list(lambda=1))
+    mySamp <- sample.haploGen(mySim, SAMPSIZE) # rDate=rpois,
+                              #arg.rDate=list(lambda=1))
     fileName <- paste("sim.unif", simIdx, sampIdx, "RData", sep=".")
     save(mySamp, file=fileName)
   }
@@ -117,8 +117,8 @@ for(simIdx in 1:NBSIM){ # does not enter this loop for whatever reason
   save(mySim, file=paste("sim.stru", simIdx, "RData", sep="."))
   ## GET SAMPLES
   for(sampIdx in 1:NBSAMP){
-    mySamp <- sample.haploGen(mySim, SAMPSIZE, rDate=rpois,
-                              arg.rDate=list(lambda=1))
+    mySamp <- sample.haploGen(mySim, SAMPSIZE) #, rDate=rpois,
+                             # arg.rDate=list(lambda=1))
     fileName <- paste("sim.stru", simIdx, sampIdx, "RData", sep=".")
     save(mySamp, file=fileName)
   }

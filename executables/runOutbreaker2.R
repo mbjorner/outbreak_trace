@@ -15,5 +15,9 @@ ances = fake_outbreak$ances # true infectors (i.e. true ancestors)
 ctd = fake_outbreak$ctd # contact tracing data
 
 
+save(fake_outbreak, file=paste("fakeOutbreak", simIdx, "RData", sep="."))
+
+
+
 
 
