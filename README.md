@@ -22,12 +22,14 @@ Simulated Data
 
 ### algorithms / methods
 
-#### graph structures:
-- SeqTrack algorithm developed by Jombart et. al. 2011
+#### genealogical graph structures:
+- seqTrack algorithm developed by Jombart et. al. 2011
 - outbreaker2
 
-#### phylo tree structures:
+#### phylogenetic tree structures:
 - BEAST
 - PhyML 3.0
 
 ### results
+- H1N1
+  - PhyML / seqTrack
