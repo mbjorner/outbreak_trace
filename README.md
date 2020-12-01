@@ -23,7 +23,7 @@ Simulated Data
 ### algorithms / methods
 
 #### graph structures:
-- SeqTrack algortihm developed by Jombart et. al. 2011
+- SeqTrack algorithm developed by Jombart et. al. 2011
 - outbreaker2
 
 #### phylo tree structures:
