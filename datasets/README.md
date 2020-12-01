@@ -6,5 +6,5 @@ folder contains datasets
 
 ### Simulated :
 
-- via outbreaker2 built-in
-- dispersal & diffusion
+- via outbreaker2 built-in (fake_outbreak)
+- random diffusion
