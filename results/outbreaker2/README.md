@@ -1,1 +1,15 @@
-This folder contains outbreaker2 results
+## Contains <i>outbreaker2</i> Results
+
+
+### What is outbreaker2, though?
+
+[outbreaker](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2330-z) is an extension to the R package <i>outbreaker</i>. Its goal is to reconstruct outbreak transmission trees, while allowing users to tune model parameters.
+
+### Usage notes:
+
+It's in R. library(outbreaker2) should be enough to import it. 
+
+<i>outbreaker2</i> has a built-in fake_outbreak which contains 30 samples, and is used between algorithms.
+
+It takes a long time depending on how outbreaker function is used. [runOutbreaker2.R](https://github.com/mbjorner/outbreak_trace/blob/main/executables/runOutbreaker2.R) displays current attempts as shamelessly copied (and tweaked!) from the [outbreaker2 R documentation](https://cran.r-project.org/web/packages/outbreaker2/outbreaker2.pdf).
+
