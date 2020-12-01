@@ -3,7 +3,7 @@
 
 ### What is outbreaker2, though?
 
-[outbreaker](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2330-z) is an extension to the R package <i>outbreaker</i>. Its goal is to reconstruct outbreak transmission trees, while allowing users to tune model parameters.
+[outbreaker2](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2330-z) is an extension to the R package <i>outbreaker</i>. Its goal is to reconstruct outbreak transmission trees, while allowing users to tune model parameters.
 
 ### Usage notes:
 
