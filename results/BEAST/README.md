@@ -3,7 +3,7 @@
 
 ### What is BEAST, though?
 
-[BEAST](http://beast.community/) (Bayesian Evolutionary Analysis Sampling Trees) is software implemented in Java for analyzing molecular sequences using MCMC. [BEAST2](http://www.beast2.org/) also available but currently unused in outbreak_trace. Both use MCMC "to average over tree space, so that each tree is weighted proportional to its posterior probability." <sup>1</sup> 
+[BEAST](http://beast.community/) (Bayesian Evolutionary Analysis Sampling Trees) is software implemented in Java for analyzing molecular sequences using MCMC. [BEAST2](http://www.beast2.org/) also available. Both use MCMC "to average over tree space, so that each tree is weighted proportional to its posterior probability." <sup>1</sup> I can't get either to work so we shall see how this pans out.
 
 ### [Summary of BEAST 2.5](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006650)
 
