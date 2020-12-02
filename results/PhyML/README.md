@@ -8,19 +8,25 @@ This method **does not** make use of time-series data, and relies upon genetic d
 
 PhyML is "**Phy**logeny software based on the **M**aximum-**L**ikelihood principle"<sup>1</sup>
 
+The original PhyML algorithm performed simulateous Nearest Neighbor Interchanges (NNIs) to improve a reasonable starting tree that is usually calculated with parsimony/distance methods. [BioNJ](https://pubmed.ncbi.nlm.nih.gov/9254330/) (Neighbor Joining) algorithm is used. This NNI method is fast!
+
+However, cons of NNI include traps in suboptimal local maxima, especially when working with larger/difficult data sets. In turn PhyML-SPR (subtree pruning and regrafting) was developed as an alternative to NNI-exclusive methods.
+
+The likelihood function is estimated with each local change (instead of global computation, which would be more computationally inefficient) to land upon a local maxima, that hopefully approximates the global one to find the best tree structure. It compares moves with Phy-aLRT (an approximate likelihood ratio test), and takes the move which will best improve the (log-)likelihood score, (which can also be considered a minimization of the parsimony scores) if one is available.
+
 ### Results:
+
+#### H1N1
 
 PhyML's integrated SMS (model selection) found GTR to be the best model for the data. GTR is the general time-reversible model.
 
 Visualizations:
 
-[HA](http://www.atgc-montpellier.fr/presto/index.php?tree=20201130-011320_Wv25/h1n1_ha_sequences_txt_alter_phy_phyml_tree.txt). 
+[HA](http://www.atgc-montpellier.fr/presto/index.php?tree=20201130-011320_Wv25/h1n1_ha_sequences_txt_alter_phy_phyml_tree.txt). Link might be dead, depending on how long these are kept. No worries, though. Can re-run with file h1n1_ha_sequences.txt.alter.phy as found in H1N1 data.
 
-Link might be dead, depending on how long these are kept. No worries, though. Can re-run with file h1n1_ha_sequences.txt.alter.phy as found in H1N1 data.
+[NA](http://www.atgc-montpellier.fr/presto/index.php?tree=20201130-012900_Jg78/h1n1_na_sequences_txt_alter_phy_phyml_tree.txt). Link might be dead, depending on how long these are kept. No worries, though. Can re-run with file h1n1_na_sequences.txt.alter.phy as found in H1N1 data.
 
-[NA](http://www.atgc-montpellier.fr/presto/index.php?tree=20201130-012900_Jg78/h1n1_na_sequences_txt_alter_phy_phyml_tree.txt)
-
-Link might be dead, depending on how long these are kept. No worries, though. Can re-run with file h1n1_na_sequences.txt.alter.phy as found in H1N1 data.
+files ending in '_tree.txt' contain [Newick format](https://evolution.gs.washington.edu/phylip/newicktree.html) structures that can be imported to visualization systems.
 
 #### References: 
 
