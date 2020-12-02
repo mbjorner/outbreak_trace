@@ -14,6 +14,8 @@ However, cons of NNI include traps in suboptimal local maxima, especially when w
 
 The likelihood function is estimated with each local change (instead of global computation, which would be more computationally inefficient) to land upon a local maxima, that hopefully approximates the global one to find the best tree structure. It compares moves with Phy-aLRT (an approximate likelihood ratio test), and takes the move which will best improve the (log-)likelihood score, (which can also be considered a minimization of the parsimony scores) if one is available.
 
+Setup can be user-designated to employ other likelihood methods. Here, I used aLRT SH-like.
+
 ### Results:
 
 #### H1N1
