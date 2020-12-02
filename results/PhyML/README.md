@@ -10,7 +10,7 @@ PhyML is "**Phy**logeny software based on the **M**aximum-**L**ikelihood princip
 
 The original PhyML algorithm performed simulateous Nearest Neighbor Interchanges (NNIs) to improve a reasonable starting tree that is usually calculated with parsimony/distance methods. [BioNJ](https://pubmed.ncbi.nlm.nih.gov/9254330/) (Neighbor Joining) algorithm is used. This NNI method is fast!
 
-However, cons of NNI include traps in suboptimal local maxima, especially when working with larger/difficult data sets. In turn PhyML-SPR (subtree pruning and regrafting) was developed as an alternative to NNI.
+However, cons of NNI include traps in suboptimal local maxima, especially when working with larger/difficult data sets. In turn PhyML-SPR (subtree pruning and regrafting) was developed as an alternative to NNI-exclusive methods.
 
 The likelihood function is estimated with each local change (instead of global computation, which would be more computationally inefficient) to land upon a local maxima, that hopefully approximates the global one to find the best tree structure. It compares moves with Phy-aLRT (an approximate likelihood ratio test), and takes the move which will best improve the (log-)likelihood score, (which can also be considered a minimization of the parsimony scores) if one is available.
 
