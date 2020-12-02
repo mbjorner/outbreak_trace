@@ -8,7 +8,7 @@ This method **does not** make use of time-series data, and relies upon genetic d
 
 PhyML is "**Phy**logeny software based on the **M**aximum-**L**ikelihood principle"<sup>1</sup>
 
-The original PhyML algorithm performed simulateous Nearest Neighbor Interchanges (NNIs) to improve a reasonable starting tree that was usually calculated with parsimony/distance methods. This NNI method is fast!
+The original PhyML algorithm performed simulateous Nearest Neighbor Interchanges (NNIs) to improve a reasonable starting tree that is usually calculated with parsimony/distance methods. [BioNJ](https://pubmed.ncbi.nlm.nih.gov/9254330/) (Neighbor Joining) algorithm is used. This NNI method is fast!
 
 However, cons of NNI include traps in suboptimal local maxima, especially when working with larger/difficult data sets. In turn PhyML-SPR (subtree pruning and regrafting) was developed as an alternative to NNI.
 
