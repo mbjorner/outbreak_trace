@@ -5,6 +5,8 @@
 
 [outbreaker2](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2330-z) is an extension to the R package <i>outbreaker</i>. Its goal is to reconstruct outbreak transmission trees, while allowing users to tune model parameters.
 
+These parameters can be custom prior distributions, custom likelihood functions and custom movement functions. It operates under Bayesian framework, using MCMC sampling to maximize some genetic pseudo-likelihood and epidemiologic pseudo-likelihood. Additional, confusing math is described [here](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003457).
+
 ### Usage notes:
 
 It's in R. library(outbreaker2) should be enough to import it. 
