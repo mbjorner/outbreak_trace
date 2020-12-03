@@ -32,4 +32,14 @@ Simulated Data
 
 ### results
 - H1N1
-  - PhyML / seqTrack
+  - PhyML 
+  - seqTrack
+  
+- fake_outbreak
+  - outbreaker2
+  - PhyML
+  - seqTrack
+  
+- Random Diffusion
+  - outbreaker2
+  - seqTrack
