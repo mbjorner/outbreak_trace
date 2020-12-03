@@ -28,11 +28,26 @@ distances    = round(as.matrix(distances))
 
 ## SEQTRACK! 
 mu1 = 0.00502/365
-fake_outbreak$onset = as.POSIXct(as.Date(fake_outbreak$onset, origin = "1970-01-01"))
-fake_outbreak_results  = seqTrack(distances, rownames(fake_outbreak), fake_outbreak$onset, prox.mat= NULL, mu=mu1, haplo.le = nbNucleotide)  
+fake_outbreak$onset = fake_outbreak$onset * 86400;
+fake_outbreak$onset = as.POSIXct(fake_outbreak$onset, origin = "2010-05-01", format = "%Y-%m-%d")
+fake_outbreak_results  = seqTrack(distances, 1:30, fake_outbreak$onset, mu=mu1, haplo.le = nbNucleotide)  
 # saves inferred ancestry information as a dataframe of seqTrack class
 
 write.csv(fake_outbreak_results, '~/Documents/GitHub/outbreak_trace/results/seqTrack/fake_outbreak_seqTrack_results.csv')
+
+
+
+nbNucleotide = ncol(as.matrix(mySim$seq))
+distances    = dist.dna(mySim$seq, model = "raw")*ncol(as.matrix(mySim$seq))
+distances    = round(as.matrix(distances))
+
+mu1 = 0.00502/365
+mySim$dates = mySim$dates * 86400;
+mySim$dates = as.POSIXct(mySim$dates, origin = "2010-05-01", format = "%Y-%m-%d")
+random_diffusion_results  = seqTrack(distances, 1:541, mySim$dates, mu=mu1, haplo.le = nbNucleotide)  
+# saves inferred ancestry information as a dataframe of seqTrack class
+
+write.csv(random_diffusion_results, '~/Documents/GitHub/outbreak_trace/results/seqTrack/random_diffusion_seqTrack_results.csv')
 
 
 ## Genetic likelihood
