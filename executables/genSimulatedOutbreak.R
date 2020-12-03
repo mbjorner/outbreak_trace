@@ -1,8 +1,14 @@
+# this is largely taken from R code written by Jombart et al. 2011 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3183872/ 
+# some parts have been tweaked so that it actually runs
+
+# currently only random diffusion works, though only generates 541 samples instead of 800.
+
+
 #### SIM 1: RANDOM DIFFUSION ####
 
 ## LIBRARY ##
 library(MASS)
-library(adegenet) # must be the devel version
+library(adegenet)
 library(ape)
 
 ## PARAMETERS FOR RANDOM DIFFUSION
